@@ -1,0 +1,54 @@
+@import "./loader";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  background: linear-gradient(rgb(0, 17, 75), rgb(0, 133, 99));
+  color: white;
+}
+
+#main-content {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in;
+
+  .location,
+  .temperature {
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .temperature {
+    flex-direction: column;
+
+    .degree-section {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      span {
+        margin: 10px;
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
+}
